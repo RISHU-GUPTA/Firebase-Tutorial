@@ -8,6 +8,7 @@ In this section you will learn how to store and retrieve data from firebase data
 2. Navigate to, Project Setting-->Service accounts-->Firebase Admin SDK-->Choose Node.js-->Click on generate new private key
 
 *This will download a json file required for firebase. Paste it in root directory and rename as admin.json* 
+
 3. We will use npm module 'firebase-admin' for firebase database.
 ```
 npm i firebase-admin --save
