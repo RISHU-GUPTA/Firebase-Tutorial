@@ -41,7 +41,7 @@ const userOperation={
         })
     },
     getOneUser(obj,res){
-        var userRefdemo=db.ref("demousers");
+        var userRefdemo=db.ref("users");
         var oneUser=userRefdemo.child(obj.roll);
         oneUser.once('value',function(snap){
             res.status(200).json({"user":snap.val()});

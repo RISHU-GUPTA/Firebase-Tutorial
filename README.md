@@ -90,11 +90,11 @@ ii) If we want only one field go to that node with **.child** method
 
 ```
  getOneUser(obj,res){
-        var userRefdemo=db.ref("demousers");
+        var userRefdemo=db.ref("users");
         var oneUser=userRefdemo.child(obj.roll);
         oneUser.once('value',function(snap){
             res.status(200).json({"user":snap.val()});
         })
     }
 ```
-*This will return a user with provided roll number only*
+*This will return a user with provided roll number only from "users"*
