@@ -2,13 +2,13 @@
 Learn how to use firebase database and authenication in nodejs app
 
 ## Firebase Database
-In this section you will learn how to upload and retrieve data from firebase database.
+In this section you will learn how to store and retrieve data from firebase database.
 ### Prerequisites
 1. Go to firebase console, create a project (or your existing project)
 2. Navigate to, Project Setting-->Service accounts-->Firebase Admin SDK-->Choose Node.js-->Click on generate new private key
 
 *This will download a json file required for firebase. Paste it in root directory and rename as admin.json* 
-
+3. We will use npm module 'firebase-admin' for firebase database.
 ```
 npm i firebase-admin --save
 ```
@@ -90,11 +90,11 @@ ii) If we want only one field go to that node with **.child** method
 
 ```
  getOneUser(obj,res){
-        var userRefdemo=db.ref("demousers");
+        var userRefdemo=db.ref("users");
         var oneUser=userRefdemo.child(obj.roll);
         oneUser.once('value',function(snap){
             res.status(200).json({"user":snap.val()});
         })
     }
 ```
-*This will return a user with provided roll number only*
+*This will return a user with provided roll number only from "users"*

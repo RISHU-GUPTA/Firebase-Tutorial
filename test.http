@@ -1,0 +1,33 @@
+POST http://localhost:5555/addUser
+content-type: application/json
+
+{
+    "name": "Rishu Gupta",
+    "roll": "2517045",
+    "email":"abc@gmail.com"
+}
+
+###
+POST http://localhost:5555/demoUser
+content-type: application/json
+
+{
+    "name": "Shyam",
+    "roll": "251554",
+    "email":"shyam@gmail.com"
+}
+
+###
+
+GET http://localhost:5555/getUsers
+
+###
+POST http://localhost:5555/getOneUser
+content-type: application/json
+
+{
+    "roll": "2517045"
+}
+
+
+//You need to install REST Client extension to test http request in VS code only.
